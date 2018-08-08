@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Form submit</title>
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body style="padding-top: 50px; padding-bottom: 50px">
+<div class="container">
+  <div class="row" style="margin-bottom: 40px">
+    <div class="col-6">
+      <h2>Задачи</h2>
+      <p>
+        При нажатии на
+        <code>button class="submit"</code> получить значения из всех полей и провалидировать их - ни одно из полей не должно быть пустым,
+        валидным полям добавлять <code>.is-valid</code>, инвалидным <code>.is-invalid</code>.
+      </p>
+      <p>Если все поля валидные, то вывести полученные значения в соответствующие блоки:</p>
+      <ul>
+        <li>Значение из <code>input class="email"</code> в <code>p class="email-output"</code></li>
+        <li>Значение из <code>input class="password"</code> в <code>p class="password-output"</code></li>
+        <li>Значение из <code>input class="confirm-password"</code> в <code>p class="confirm-password-output"</code>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-6">
+      <h2>Форма</h2>
+      <form class="form">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input required type="email" class="form-control email" id="email" aria-describedby="emailHelp" placeholder="john.doe@gmail.com">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input required type="password" class="form-control password" id="password" placeholder="qwerty123">
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Password</label>
+          <input required type="password" class="form-control confirm-password" id="confirm-password" placeholder="qwerty123">
+        </div>
+
+        <button class="btn btn-primary submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div>
+    <div style="display: flex; align-items: center; margin-bottom: .5rem;">
+      <h3 style="margin-bottom: 0">Email address:</h3>
+      <p class="email-output" style="margin-top: 0; margin-left: 10px; margin-bottom: 0;"></p>
+    </div>
+
+    <div style="display: flex; align-items: center; margin-bottom: .5rem;">
+      <h3 style="margin-bottom: 0">Password:</h3>
+      <p class="password-output" style="margin-top: 0; margin-left: 10px; margin-bottom: 0;"></p>
+    </div>
+
+    <div style="display: flex; align-items: center; margin-bottom: .5rem;">
+      <h3 style="margin-bottom: 0">Confirm password:</h3>
+      <p class="confirm-password-output" style="margin-top: 0; margin-left: 10px; margin-bottom: 0;"></p>
+    </div>
+  </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
