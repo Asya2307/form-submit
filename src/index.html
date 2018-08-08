@@ -13,7 +13,7 @@
 <div class="container">
   <div class="row" style="margin-bottom: 40px">
     <div class="col-6">
-      <h2>Задачи</h2>
+      <h2>Задача</h2>
       <p>
         При нажатии на
         <code>button class="submit"</code> получить значения из всех полей и провалидировать их - ни одно из полей не должно быть пустым,
@@ -26,6 +26,33 @@
         <li>Значение из <code>input class="confirm-password"</code> в <code>p class="confirm-password-output"</code>
         </li>
       </ul>
+
+      <h2>Пошаговый план выполнения</h2>
+      <ol>
+        <li>Получаешь <code>form class="form"</code> и вешаешь на него событие <code>submit</code></li>
+        <li>В коллбеке получаешь <code>event</code> и делаешь <code>event.preventDefault()</code></li>
+        <li>Получаешь поля и сохраняешь их в переменные</li>
+        <li>Получаешь значения полей и сохраняешь их в переменные</li>
+        <li>
+          Создаешь переменную и сохраняешь туда массив объектов по типу
+          <br>
+          <code>
+            [{ element: field1, value: value1 },
+            <br>
+                { element: field2, value: value2 },
+            <br>
+                { element: field3, value: value3 }]
+          </code>
+        </li>
+        <li>
+          Начинаешь переберать этот массив с помощью <code>.forEach</code>, 
+          внутри массива проверяешь <code>value</code> с помощью <code>.length</code> 
+          и если оно равно 0, то добавляешь этому полю <code>.is-invalid</code> и удаляешь <code>.is-valid</code>, 
+          а если <code>length</code> больше 0, то добавляешь <code>.is-valid</code> и удаляешь <code>.is-invalid</code>
+        </li>
+        <li>Получаешь <code>input class="is-invalid"</code> с помощью <code>.querySelectorAll</code> и сохраняешь в переменную</li>
+        <li>Получаешь <code>.length</code> этого массива и если он равен 0, то выводишь полученные значения полей в соответствующие блоки</li>
+      </ol>
     </div>
 
     <div class="col-6">
